@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using LabFirst.Interfaces;
+using LabFirst.Models;
 
-namespace LabFirst
+namespace LabFirst.Factories
 {
     /// <summary>
     /// Создаёт экземпляры <see cref="Person"/>, 

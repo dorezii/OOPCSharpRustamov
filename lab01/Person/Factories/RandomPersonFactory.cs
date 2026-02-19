@@ -1,6 +1,8 @@
 ﻿using System;
+using LabFirst.Interfaces;
+using LabFirst.Models;
 
-namespace LabFirst
+namespace LabFirst.Factories
 {
     /// <summary>
     /// Создаёт случайные экземпляры <see cref="Person"/> на основе источника имён.
