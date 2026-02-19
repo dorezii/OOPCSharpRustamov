@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace LabFirst
+namespace LabFirst.Services
 {
     /// <summary>
     /// Содержит вспомогательные методы для чтения данных о людях 

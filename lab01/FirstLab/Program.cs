@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using LabFirst.Collections;
+using LabFirst.Factories;
+using LabFirst.Models;
+using LabFirst.Sources;
 
-using LabFirst;
 
 namespace FirstLab
 {

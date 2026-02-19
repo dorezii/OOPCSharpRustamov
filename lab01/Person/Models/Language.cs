@@ -1,4 +1,4 @@
-﻿namespace LabFirst
+﻿namespace LabFirst.Models
 {
     /// <summary>
     /// Определяет язык, на котором записаны имя и фамилия.

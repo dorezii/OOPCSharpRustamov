@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace LabFirst
+namespace LabFirst.Models
 {
     /// <summary>
     /// <see cref="Person"/>
@@ -45,7 +45,7 @@ namespace LabFirst
         /// и <see cref="Surname"/>.
         /// </summary>
         /// <remarks>
-        /// Значение <see cref="LabFirst.Language.Null"/> означает, 
+        /// Значение <see cref="LabFirst.Models.Language.Null"/> означает, 
         /// что имя и фамилия ещё не заданы.
         /// </remarks>
         private Language _language = Language.Null;
@@ -62,8 +62,8 @@ namespace LabFirst
         /// </summary>
         /// <remarks>
         /// По умолчанию имя и фамилия пустые, возраст равен 0,
-        /// пол равен <see cref="LabFirst.Gender.Unknown"/>, 
-        /// язык равен <see cref="LabFirst.Language.Null"/>.
+        /// пол равен <see cref="LabFirst.Models.Gender.Unknown"/>, 
+        /// язык равен <see cref="LabFirst.Models.Language.Null"/>.
         /// </remarks>
         public Person()
         {
@@ -292,7 +292,7 @@ namespace LabFirst
         /// <returns>
         /// <see cref="LabFirst.Language.Russian"/> 
         /// или <see cref="LabFirst.Language.English"/>, если язык распознан;
-        /// иначе <see cref="LabFirst.Language.Null"/>.
+        /// иначе <see cref="LabFirst.Models.Language.Null"/>.
         /// </returns>
         private static Language DetectLanguage(string value)
         {

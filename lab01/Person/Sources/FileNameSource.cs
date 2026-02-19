@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using LabFirst.Interfaces;
+using LabFirst.Services;
 
-namespace LabFirst
+namespace LabFirst.Sources
 {
     /// <summary>
     /// Источник имён и фамилий, загружающий данные из текстовых файлов.

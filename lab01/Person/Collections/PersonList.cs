@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using LabFirst.Models;
 
-namespace LabFirst
+namespace LabFirst.Collections
 {
     /// <summary>
     /// Представляет список объектов <see cref="Person"/> 
