@@ -1,10 +1,9 @@
-﻿using LabFirst;
-using LabFirst.Helpers;
+﻿using LabFirst.Helpers;
 using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LabFirst
+namespace LabFirst.Models
 {
     /// <summary>
     /// <see cref="Person"/>

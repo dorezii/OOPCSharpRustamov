@@ -1,7 +1,7 @@
 ﻿using System;
 using LabFirst.Helpers;
 
-namespace LabFirst
+namespace LabFirst.Factories
 {
     /// <summary>
     /// Создаёт случайные экземпляры <see cref="Adult"/> 

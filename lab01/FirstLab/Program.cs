@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using LabFirst;
-using Person;
-using Person.Person;
+using LabFirst.Collections;
+using LabFirst.Enums;
+using LabFirst.Factories;
+using LabFirst.Models;
+using LabFirst.Sources;
 
 namespace FirstLab
 {

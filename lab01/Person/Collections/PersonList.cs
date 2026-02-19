@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace LabFirst
+namespace LabFirst.Collections
 {
     /// <summary>
     /// Представляет список объектов <see cref="Person"/> 

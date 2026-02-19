@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace LabFirst
+namespace LabFirst.Models
 {
     /// <summary>
     /// Взрослый человек: паспорт, семейное положение, место работы

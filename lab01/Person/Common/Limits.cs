@@ -1,4 +1,4 @@
-﻿namespace LabFirst
+﻿namespace LabFirst.Common
 {
     /// <summary>
     /// Класс хранит пороговые значения возраста
