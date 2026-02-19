@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace LabFirst
+namespace LabFirst.Factories
 {
     /// <summary>
     /// Создаёт экземпляры <see cref="Person"/>, 

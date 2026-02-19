@@ -1,4 +1,4 @@
-﻿namespace LabFirst
+﻿namespace LabFirst.Interfaces
 {
     //TODO: разделить интерфейсы по файлам.
     public interface IPersonNameSource

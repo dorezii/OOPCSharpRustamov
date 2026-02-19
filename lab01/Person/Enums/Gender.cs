@@ -1,4 +1,4 @@
-﻿namespace LabFirst
+﻿namespace LabFirst.Enums
 {
     /// <summary>
     /// Определяет пол человека.
