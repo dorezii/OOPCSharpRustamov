@@ -28,11 +28,7 @@ namespace View
         {
             InitializeComponent();
             _figures = figures;
-            //TODO: duplication
-            FigureTypeComboBox.Items.Add("Все");
-            FigureTypeComboBox.Items.Add("Сфера");
-            FigureTypeComboBox.Items.Add("Пирамида");
-            FigureTypeComboBox.Items.Add("Параллелепипед");
+                        FigureTypeComboBox.Items.AddRange(FigureConstants.FigureTypesWithAll);
             FigureTypeComboBox.SelectedIndex = 0;
         }
 
@@ -45,8 +41,7 @@ namespace View
         /// </returns>
         private static string FormatVolume(double volume)
         {
-            //TODO: duplication
-            return volume.ToString("F6");
+                        return volume.ToString(FigureConstants.VolumeFormat);
         }
 
 
@@ -82,7 +77,7 @@ namespace View
         private List<VolumeFigureBase> FindFigures()
         {
             string selectedType = FigureTypeComboBox.SelectedItem?.ToString()
-                ?? "Все";
+                ?? FigureConstants.AllFigures;
 
             bool isMinValid = Validation.TryParseOptionalPositiveDouble(
                 MinVolumeTextBox,
@@ -107,7 +102,7 @@ namespace View
 
             IEnumerable<VolumeFigureBase> query = _figures;
 
-            if (selectedType != "Все")
+            if (selectedType != FigureConstants.AllFigures)
             {
                 query = query.Where(figure => figure.FigureType == selectedType);
             }

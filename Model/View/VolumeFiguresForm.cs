@@ -42,8 +42,7 @@ namespace View
             }
         }
 
-        //TODO: duplication
-        /// <summary>
+                /// <summary>
         /// Форматирует объём фигуры для удобного отображения в таблице.
         /// </summary>
         /// <param name="volume">Объём фигуры.</param>
@@ -51,7 +50,7 @@ namespace View
         /// Строковое представление объёма с шестью знаками после запятой.
         /// </returns>
         private static string FormateVolume(double volume) =>
-            volume.ToString("F6");
+            volume.ToString(FigureConstants.VolumeFormat);
 
         /// <summary>
         /// Обновляет доступность команды сохранения 

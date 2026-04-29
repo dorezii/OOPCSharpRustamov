@@ -30,10 +30,7 @@ namespace View
         {
             InitializeComponent();
             
-            //TODO: duplication
-            FigureTypeComboBox.Items.Add("Сфера");
-            FigureTypeComboBox.Items.Add("Пирамида");
-            FigureTypeComboBox.Items.Add("Параллелепипед");
+            FigureTypeComboBox.Items.AddRange(FigureConstants.FigureTypes);
             FigureTypeComboBox.SelectedIndex = 0;
 
             UpdatePanelIsVisibility();
@@ -66,10 +63,9 @@ namespace View
             string selectedType = FigureTypeComboBox.SelectedItem?.ToString()
                 ?? string.Empty;
 
-            //TODO: duplication
-            SpherePanel.Visible = selectedType == "Сфера";
-            PyramidPanel.Visible = selectedType == "Пирамида";
-            ParallelepipedPanel.Visible = selectedType == "Параллелепипед";
+                        SpherePanel.Visible = selectedType == FigureConstants.Sphere;
+            PyramidPanel.Visible = selectedType == FigureConstants.Pyramid;
+            ParallelepipedPanel.Visible = selectedType == FigureConstants.Parallelepiped;
         }
 
         /// <summary>
@@ -128,10 +124,9 @@ namespace View
 
             return selectedType switch
             {
-                //TODO: duplication
-                "Сфера" => CreateSphere(),
-                "Пирамида" => CreatePyramid(),
-                "Параллелепипед" => CreateParallelepiped(),
+                                FigureConstants.Sphere => CreateSphere(),
+                FigureConstants.Pyramid => CreatePyramid(),
+                FigureConstants.Parallelepiped => CreateParallelepiped(),
                 _ => throw new InvalidOperationException("Тип фигуры не выбран.")
             };
         }
@@ -227,14 +222,13 @@ namespace View
 
             switch (selectedType)
             {
-                //TODO: duplication
-                case "Сфера":
+                                case FigureConstants.Sphere:
                 {
                     ResetTextBoxes(SphereRadiusTextBox);
                     break;
                 }
 
-                case "Пирамида":
+                case FigureConstants.Pyramid:
                 {
                     ResetTextBoxes(
                     PyramidBaseLengthTextBox,
@@ -243,7 +237,7 @@ namespace View
                     break;
                 }
 
-                case "Параллелепипед":
+                case FigureConstants.Parallelepiped:
                 {
                         //TODО: отступы
                     ResetTextBoxes(
@@ -285,8 +279,7 @@ namespace View
 
             switch (selectedType)
             {
-                //TODO: duplication
-                case "Сфера":
+                                case FigureConstants.Sphere:
                 {
                     SphereRadiusTextBox.Text
                             //TODO: to const
@@ -294,7 +287,7 @@ namespace View
                     break;
                 }
 
-                case "Пирамида":
+                case FigureConstants.Pyramid:
                 {
                     PyramidBaseLengthTextBox.Text
                         = NextPositiveDouble(1, 20).ToString("F2");
@@ -305,7 +298,7 @@ namespace View
                     break;
                 }
 
-                case "Параллелепипед":
+                case FigureConstants.Parallelepiped:
                 {
                     ParallelepipedLengthTextBox.Text
                         = NextPositiveDouble(1, 20).ToString("F2");

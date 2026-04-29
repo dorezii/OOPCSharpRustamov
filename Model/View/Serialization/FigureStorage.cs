@@ -1,4 +1,5 @@
 ﻿using Model;
+using View.Helper;
 using System.Xml.Serialization;
 
 namespace View.Serialization
@@ -85,12 +86,11 @@ namespace View.Serialization
         {
             switch (figure)
             {
-                //TODO: duplication
-                case Sphere sphere:
+                                case Sphere sphere:
                 {
                     return new FigureData
                     {
-                        FigureKind = "Сфера",
+                        FigureKind = FigureConstants.Sphere,
                         Radius = sphere.Radius
                     };
                 }
@@ -99,7 +99,7 @@ namespace View.Serialization
                 {
                     return new FigureData
                     {
-                        FigureKind = "Пирамида",
+                        FigureKind = FigureConstants.Pyramid,
                         BaseLength = pyramid.BaseLength,
                         BaseWidth = pyramid.BaseWidth,
                         Height = pyramid.Height
@@ -110,7 +110,7 @@ namespace View.Serialization
                 {
                     return new FigureData
                     {
-                        FigureKind = "Параллелепипед",
+                        FigureKind = FigureConstants.Parallelepiped,
                         Length = parallelepiped.Length,
                         Width = parallelepiped.Width,
                         Height = parallelepiped.Height
@@ -141,8 +141,7 @@ namespace View.Serialization
         {
             switch (figureData.FigureKind)
             {
-                //TODO: duplication
-                case "Сфера":
+                                case FigureConstants.Sphere:
                 {
                     return new Sphere(
                         figureData.Radius
@@ -150,7 +149,7 @@ namespace View.Serialization
                             "Не задан Radius."));
                 }
 
-                case "Пирамида":
+                case FigureConstants.Pyramid:
                 {
                     return new Pyramid(
                         figureData.BaseLength
@@ -164,7 +163,7 @@ namespace View.Serialization
                             "Не задан Height."));
                 }
 
-                case "Параллелепипед":
+                case FigureConstants.Parallelepiped:
                 {
                     return new Parallelepiped(
                         figureData.Length
